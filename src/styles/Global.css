@@ -1,0 +1,75 @@
+/* Global Styles */
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .status-badge.open {
+    background-color: #e0f0ff;
+    color: #006fbb;
+  }
+  
+  .status-badge.resolved {
+    background-color: #e3fcec;
+    color: #008060;
+  }
+  
+  .status-badge.closed {
+    background-color: #f6f6f7;
+    color: #5c5f62;
+  }
+  
+  .reply-history {
+    margin-top: 2rem;
+    border-top: 1px solid #dfe3e8;
+    padding-top: 1rem;
+  }
+  
+  .reply-item {
+    background: #f6f6f7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .reply-item small {
+    color: #5c5f62;
+    display: block;
+    margin-top: 0.5rem;
+  }
+  
+  .section-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .no-replies {
+    color: #5c5f62;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Login Page Styles */
+  .login-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    color: #5c5f62;
+    margin-top: 0.5rem;
+  }
