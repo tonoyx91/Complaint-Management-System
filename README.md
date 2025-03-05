@@ -1,13 +1,66 @@
-# React + Vite
+# Complaint Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This repository contains the **frontend** of the **Complaint Management System**, built using **React.js** and **Shopify Polaris** for UI components. Users can submit complaints, track their status, and admins can manage complaints efficiently.
 
-Currently, two official plugins are available:
+## Features
+- **User Authentication**: Login and role-based access control.
+- **Complaint Submission**: Users can file complaints.
+- **Complaint Management**: Admins can view, filter, and reply to complaints.
+- **Profile Display**: Users and admins can see their profile information.
+- **Responsive UI**: Mobile-friendly design using Shopify Polaris.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **React.js** - Frontend framework
+- **Shopify Polaris** - UI Component Library
+- **Axios** - API communication
+- **React Router** - Navigation handling
+- **LocalStorage** - Authentication state persistence
 
-## Expanding the ESLint configuration
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/complaint-management-frontend.git
+   cd complaint-management-frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Create a `.env` file and set:
+   ```
+   REACT_APP_API_URL=http://localhost:5000/api
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Complaint-Management-System
+## Project Structure
+```
+complaint-management-frontend/
+│── src/
+│   ├── components/
+│   │   ├── AuthContext.jsx       # Manages authentication state
+│   │   ├── ProtectedRoute.jsx    # Role-based route protection
+│   ├── pages/
+│   │   ├── LoginPage.jsx         # User login page
+│   │   ├── AdminDashboard.jsx    # Admin panel for managing complaints
+│   │   ├── CustomerDashboard.jsx # User dashboard for submitting complaints
+│   ├── api/
+│   │   ├── api.js                # Axios API configuration
+│   ├── App.js                    # Main App Component
+│── public/
+│── package.json                  # Dependencies
+```
+
+## API Endpoints Used
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| `POST` | `/users/login` | User authentication |
+| `POST` | `/users/register` | User registration |
+| `GET` | `/users/profile/:email` | Fetch user details |
+| `POST` | `/complaints` | Submit a new complaint |
+| `POST` | `/complaints/user` | Fetch user complaints |
+| `GET` | `/complaints/admin/all?email=admin@admin.com` | Admin fetches all complaints |
+| `PATCH` | `/complaints/reply/:id` | Admin replies to a complaint |
